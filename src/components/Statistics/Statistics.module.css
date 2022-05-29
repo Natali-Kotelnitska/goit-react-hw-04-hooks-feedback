@@ -1,0 +1,13 @@
+.statisticsWrapper {
+  margin-top: 25px;
+  /* margin-bottom: 25px;
+  font-size: 40px;
+  align-items: center; */
+}
+.statisticItem {
+  font-size: 30px;
+  font-weight: 500;
+}
+.statisticItem:not(:last-child) {
+  margin-bottom: 15px;
+}
