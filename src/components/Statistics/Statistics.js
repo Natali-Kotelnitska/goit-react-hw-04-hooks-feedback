@@ -1,6 +1,6 @@
 // Винеси відображення статистики в окремий компонент <Statistics good={} neutral={} bad={} total={} positiveercentage={}>.
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
 export default function Statistic({
@@ -10,6 +10,7 @@ export default function Statistic({
   total,
   positivePercentage,
 }) {
+  console.log(good);
   return (
     <div className={s.statisticsWrapper}>
       {/* <div> */}
@@ -23,10 +24,10 @@ export default function Statistic({
   );
 }
 
-Statistic.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.string.isRequired,
-};
+// Statistic.propTypes = {
+//   good: PropTypes.number.isRequired,
+//   neutral: PropTypes.number.isRequired,
+//   bad: PropTypes.number.isRequired,
+//   total: PropTypes.number.isRequired,
+//   positivePercentage: PropTypes.string.isRequired,
+// };

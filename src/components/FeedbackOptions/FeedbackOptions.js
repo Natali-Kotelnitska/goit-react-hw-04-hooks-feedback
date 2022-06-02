@@ -6,7 +6,7 @@ export default function FeedbackOptions({ options, onButtonClick }) {
   console.log(options);
   return (
     <div className={s.container}>
-      {options.map(option => {
+      {Object.keys(options).map(option => {
         return (
           <button
             key={option}
@@ -15,6 +15,8 @@ export default function FeedbackOptions({ options, onButtonClick }) {
             className={s.button}
             onClick={e => {
               onButtonClick(e.currentTarget.name);
+              // console.log(e.target);
+              // return e.currentTarget.name;
             }}
           >
             {option}
@@ -25,7 +27,7 @@ export default function FeedbackOptions({ options, onButtonClick }) {
   );
 }
 
-FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string.isRequired),
-  onButtonClick: PropTypes.func.isRequired,
-};
+// FeedbackOptions.propTypes = {
+//   options: PropTypes.object(PropTypes.string.isRequired),
+//   onButtonClick: PropTypes.func.isRequired,
+// };
